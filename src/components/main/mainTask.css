@@ -1,0 +1,90 @@
+.main__title {
+    margin-top: 25px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    color: #000;
+}
+
+.main_wrap-grid {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 25px;
+}
+
+.main_wrap-item {
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 25px;
+    position: relative;
+}
+
+.main_wrap-item._deleteAnim:nth-child(odd) {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 1s;
+}
+.main_wrap-item._deleteAnim:nth-child(even) {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all 1s;
+}
+
+.item__btns {
+    display: flex;
+    align-items: center;
+}
+.btns_edit,
+.btns_add {
+    position: absolute;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.item-text {
+    display: flex;
+    align-items: center;
+}
+.item-text-position {
+    margin-right: 15px;
+}
+.item-text-task {
+    font-size: 20px;
+    font-style: italic;
+}
+.complete {
+    text-decoration: line-through;
+}
+.item {
+    display: flex;
+    align-items: center;
+}
+.item > .item-text {
+    margin-left: 15px;
+}
+.btns_edit{
+    top: 3px;
+    right: 30px;
+}
+.btns_add {
+    top: 3px;
+    right: 0;
+}
+.btns_add img,
+.btns_edit img {
+    width: 20px;
+    height: 20px;
+}
+
+@media(max-width: 768px) {
+    .main_wrap-grid {
+        margin-top: 25px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1fr;
+        grid-gap: 25px;
+    }
+}
